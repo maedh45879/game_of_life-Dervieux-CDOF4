@@ -4,7 +4,7 @@ import os
 class Game_of_life :
     def __init__(self, size=30, population = 0.1):
         self.size = size
-        self.board = [[0 for x in range(size)] for y in range(size)]
+        self.board = [[0 for x in range(int(size*1.5))] for y in range(size)]
         import random
         for i in range(size):
             for j in range(size):
@@ -18,7 +18,7 @@ class Game_of_life :
         for i in range(self.size):
             for j in range(self.size):
                 if self.board[i][j] == 1:
-                    print('#', end='')
+                    print(f"\033[47m{' '}\033[0m", end='')
                 else:
                     print(' ', end='')
             print()
@@ -43,5 +43,5 @@ class Game_of_life :
             self.print_board()
             self.next_generation()
             print()
-            time.sleep(1)
+            time.sleep(0.5)
             os.system('cls')

@@ -6,4 +6,3 @@ pop = float(input('Quelle proportion de cellules vivantes initiales souhaitez-vo
 game.__init__(size)
 iterations = int(input('Combien de cycles d\'itérations voulez-vous que le jeu exécute ? (par exemple, 50) :\n'))
 game.run(iterations)
-
